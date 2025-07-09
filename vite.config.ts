@@ -5,7 +5,7 @@ import { createServer } from "./server";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/sahayak-frontend/',
+  base: mode === 'production' ? '/sahayak-frontend/' : '/',
   server: {
     host: "::",
     port: 8080,
